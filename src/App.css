@@ -1,38 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+:root {
+  --Pale-blue: hsl(223, 100%, 88%);
+  --Light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --Very-dark-blue: hsl(209, 33%, 12%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1.25rem;
+  background-color: black;
+}
 .App {
+  font-family: sans-serif;
   text-align: center;
+  font-family: "Libre Franklin", sans-serif;
+  background-color: #FFA500
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container h1 {
+  color: var(--gray);
+  font-weight: 300;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container span {
+  color: var(--Very-dark-blue);
+  font-weight: 700;
+}
+
+.container p {
+  color: var(--Very-dark-blue);
+}
+
+.container form {
+  display: flex;
+  width: 550px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.container input {
+  width: 380px;
+  height: 50px;
+  padding: 13px;
+  outline: none;
+  border-radius: 50px;
+  border: 1px solid var(--Pale-blue);
+  font-size: 0.938rem;
+  padding-left: 20px;
+}
+
+.container input::placeholder {
+  color: var(--Pale-blue);
+}
+
+.container .error {
+  font-size: 0.938rem;
+  font-weight: 300;
+  color: var(--Light-red);
+  margin: 5px;
+  font-style: italic;
+}
+
+.container .field {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.container button {
+  width: 150px;
+  height: 50px;
+  padding: 13px;
+  outline: none;
+  border-radius: 50px;
+  border: 1px solid var(--Pale-blue);
+  background-color: hsla(223, 100%, 60%);
   color: white;
+  font-weight: 600;
+  box-shadow: 0px 3px 14px -6px hsla(223, 100%, 60%);
 }
 
-.App-link {
-  color: #61dafb;
+.container button:hover {
+  cursor: pointer;
+  background-color: hsla(223, 100%, 70%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.container img {
+  margin-top: 50px;
+  width: 550px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 40px;
   }
-  to {
-    transform: rotate(360deg);
+  .container form {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .container input {
+    width: 100%;
+  }
+
+  .container button {
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .container img {
+    width: 100%;
   }
 }
